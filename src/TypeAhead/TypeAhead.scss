@@ -1,0 +1,78 @@
+.elm-type-ahead-root {
+    width: 250px;
+
+    .container {
+        position: relative;
+        width: 100%;
+
+        input {
+            width: 100%;
+            padding: 5px;
+            border: 2px solid #d4d4d4;
+            border-radius: 5px;
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 50%;
+            right: 8px;
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            color: #666;
+            transform: translateY(-50%);
+        }
+
+        .loader-container {
+            position: absolute;
+            top: 50%;
+            right: 10px;
+            transform: translateY(-50%);
+        }
+
+        .loader {
+            border: 4px solid #d3d3d3;
+            border-radius: 50%;
+            border-top: 4px solid #0000ff;
+            width: 24px;
+            height: 24px;
+            animation: spin 1s linear infinite;
+        }
+
+        .overlay {
+            position: absolute;
+            margin-top: 5px;
+            width: 100%;
+            border: 1px solid #d4d4d4;
+            border-radius: 5px;
+
+            li {
+                padding: 5px;
+                border-bottom: 1px solid #d4d4d4;
+                cursor: pointer;
+            }
+
+            .highlight {
+                background-color: #f0f0f0;
+            }
+
+
+            li:active, li:hover {
+                background-color: #f0f0f0;
+            }
+
+            li:last-of-type{
+                border-bottom: 0px;
+            }
+        }
+
+        .message {
+        }
+
+    }
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg)}
+    100% { transform: rotate(360deg)}
+}
